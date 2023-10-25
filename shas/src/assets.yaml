@@ -1,0 +1,7 @@
+name: Sofy_OTS
+projectReferences: 
+resources: 
+  - name: shas
+    resources: 
+      - name: _google_com_a3a.ma
+        type: moeb.applicationPackage
