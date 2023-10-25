@@ -1,0 +1,30 @@
+name: shas
+version: 2
+projectReferences: 
+  - /Sofy_OTS
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /shas/src
+        type: javaClasspath
+  - name: chrom(2).recdata
+  - name: chrom(2).recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /shas/chrom(2).recdata
+        type: recsessionRecdata
+  - name: chrom.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 10.5.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE3089EA012360EF37E46136663136
+    dependencies: 
+      - path: /Sofy_OTS/shas/_google_com_a3a.ma
+        type: test#moeb.applicationPackage
+      - path: /shas/chrom(2).recsession
+        type: testRecsession
+  - name: src
+    resources: 
